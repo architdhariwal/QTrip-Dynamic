@@ -58,6 +58,7 @@ footer {
   align-items: center;
 }
 .tile img {
+<<<<<<< HEAD
   /* width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -69,6 +70,15 @@ footer {
   /* -webkit-filter: brightness(70%); */
 }
 .tile:hover img {
+=======
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  -webkit-transition: 0.2s all;
+  /* -webkit-filter: brightness(70%); */
+}
+.tile img:hover {
+>>>>>>> 266a53f077b904f62c9d2a1aa9bf9c77c5a724a4
   -webkit-filter: brightness(50%);
   transform: scale(1.1);
 }

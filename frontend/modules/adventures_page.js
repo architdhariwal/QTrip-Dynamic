@@ -5,15 +5,20 @@ import config from "../conf/index.js";
 function getCityFromURL(search) {
   // TODO: MODULE_ADVENTURES
   // 1. Extract the city id from the URL's Query Param and return it
+<<<<<<< HEAD
   let param = new URLSearchParams(search);
   let city = param.get("city");
   return city;
+=======
+
+>>>>>>> 266a53f077b904f62c9d2a1aa9bf9c77c5a724a4
 }
 
 //Implementation of fetch call with a paramterized input based on city
 async function fetchAdventures(city) {
   // TODO: MODULE_ADVENTURES
   // 1. Fetch adventures using the Backend API and return the data
+<<<<<<< HEAD
   let adventurePageUrl = `/adventures/?city=${city}`;
   try{
     let res = await fetch(`${config.backendEndpoint}${adventurePageUrl}`);
@@ -26,12 +31,16 @@ async function fetchAdventures(city) {
     console.log("Error in fetching cities ",error);
     return null;
   }
+=======
+
+>>>>>>> 266a53f077b904f62c9d2a1aa9bf9c77c5a724a4
 }
 
 //Implementation of DOM manipulation to add adventures for the given city from list of adventures
 function addAdventureToDOM(adventures) {
   // TODO: MODULE_ADVENTURES
   // 1. Populate the Adventure Cards and insert those details into the DOM
+<<<<<<< HEAD
   const dataContainer = document.getElementById("data");
 
   adventures.forEach((adventure) => {
@@ -57,6 +66,9 @@ function addAdventureToDOM(adventures) {
 
     dataContainer.appendChild(container);
   });
+=======
+
+>>>>>>> 266a53f077b904f62c9d2a1aa9bf9c77c5a724a4
 }
 
 //Implementation of filtering by duration which takes in a list of adventures, the lower bound and upper bound of duration and returns a filtered list of adventures.
