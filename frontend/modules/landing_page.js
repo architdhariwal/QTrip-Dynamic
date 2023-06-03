@@ -2,14 +2,9 @@ import config from "../conf/index.js";
 
 async function init() {
   //Fetches list of all cities along with their images and description
-<<<<<<< HEAD
   console.log("From init()");
   console.log(config);
   let cities = await fetchCities();
-  console.log("cities------>",cities);
-=======
-  let cities = await fetchCities();
->>>>>>> 266a53f077b904f62c9d2a1aa9bf9c77c5a724a4
 
   //Updates the DOM with the cities
   if (cities) {
@@ -23,7 +18,6 @@ async function init() {
 async function fetchCities() {
   // TODO: MODULE_CITIES
   // 1. Fetch cities using the Backend API and return the data
-<<<<<<< HEAD
   let landingPageUrl = "/cities";
   try{
     let res = await fetch(`${config.backendEndpoint}${landingPageUrl}`);
@@ -58,17 +52,7 @@ function addCityToDOM(id, city, description, image) {
 
   const dataContainer = document.getElementById("data");
   dataContainer.appendChild(container);
-  
-=======
-
-}
-
-//Implementation of DOM manipulation to add cities
-function addCityToDOM(id, city, description, image) {
-  // TODO: MODULE_CITIES
-  // 1. Populate the City details and insert those details into the DOM
-
->>>>>>> 266a53f077b904f62c9d2a1aa9bf9c77c5a724a4
+    
 }
 
 export { init, fetchCities, addCityToDOM };
