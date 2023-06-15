@@ -154,7 +154,7 @@ function generateFilterPillsAndUpdateDOM(filters) {
 
   // Generate pills for each selected category
   filters.category.forEach(category => {
-    const pill = document.createElement("span");
+    const pill = document.createElement("div");
     pill.className = "category-filter";
     pill.innerText = category;
 
