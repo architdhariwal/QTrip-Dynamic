@@ -6,7 +6,6 @@ function getAdventureIdFromURL(search) {
   // 1. Get the Adventure Id from the URL
   const params = new URLSearchParams(search);
   const adventure = params.get("adventure");
-  console.log("adventure", adventure);
   if (adventure) {
     return adventure;
   }
@@ -21,9 +20,7 @@ async function fetchAdventureDetails(adventureId) {
   let adventureDetailsUrl = `/adventures/detail?adventure=${adventureId}`;
   try {
     let res = await fetch(`${config.backendEndpoint}${adventureDetailsUrl}`);
-    console.log(res);
     let data = await res.json();
-    console.log("data------->", data);
     return data;
   } catch (error) {
     console.log("Error in fetching cities ", error);
@@ -105,7 +102,6 @@ function addBootstrapPhotoGallery(images) {
 function conditionalRenderingOfReservationPanel(adventure) {
   // TODO: MODULE_RESERVATIONS
   // 1. If the adventure is already reserved, display the sold-out message.
-  console.log("-----------",adventure);
   if(adventure.available){
     document.getElementById("reservation-panel-available").style.display = 'block';
     document.getElementById("reservation-panel-sold-out").style.display = 'none';

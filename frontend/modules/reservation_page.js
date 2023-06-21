@@ -8,7 +8,6 @@ async function fetchReservations() {
   try{
     let result = await fetch(`${config.backendEndpoint}${reserve}`);
     let data = await result.json();
-    console.log("data----->",data)
     return data; 
   }
 catch(err){
